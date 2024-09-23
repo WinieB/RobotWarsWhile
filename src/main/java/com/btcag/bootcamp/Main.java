@@ -14,7 +14,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println(
-                        "================================\n" +
+                "================================\n" +
                         "         Willkommen bei         \n" +
                         "            ROBOWARS            \n" +
                         "================================\n" +
@@ -42,8 +42,33 @@ public class Main {
 
         System.out.println("\nNa los " + playerName + ", krall dir " + roboName + " und auf in den Kampf!");
 
-       // field();
 
+        int i = 0;
+        while (i < ROWS) {
+            int j = 0;
+
+            while (j < COLS) {
+                int tempRoboRow = roboRows;
+                int tempRoboCol = roboCols;
+
+                System.out.print("[");
+                String inhalt = " ";
+
+                while (i == tempRoboRow) {
+                    while (j == tempRoboCol) {
+                        inhalt = "a";
+                        tempRoboCol++;
+                    }
+                    tempRoboRow++;
+                }
+
+                System.out.print(inhalt + "]");
+                j++;
+
+            }
+            System.out.println();
+            i++;
+
+        }
     }
-
 }
